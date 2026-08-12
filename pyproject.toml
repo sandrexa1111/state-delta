@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "state-delta"
+version = "0.1.0"
+description = "Deterministic verification of observable state changes"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Alexandre Mosiashvili"}]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6", "mypy>=1.11"]
+
+[project.scripts]
+state-delta = "state_delta.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/state_delta"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.mypy]
+strict = true
