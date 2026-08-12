@@ -1,0 +1,20 @@
+{
+  "allowed": [
+    "/event/title",
+    "/audit/updated_by"
+  ],
+  "forbidden": [
+    "/permissions/*"
+  ],
+  "required": [
+    {
+      "kind": "equals",
+      "path": "/event/title",
+      "value": "Planning - Q3"
+    },
+    {
+      "kind": "unchanged",
+      "path": "/event/attendees"
+    }
+  ]
+}
