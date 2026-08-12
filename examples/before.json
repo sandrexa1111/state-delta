@@ -1,0 +1,14 @@
+{
+  "event": {
+    "id": "e-7",
+    "title": "Planning",
+    "room": "A",
+    "attendees": ["ana", "gio"]
+  },
+  "permissions": {
+    "guest_can_invite": false
+  },
+  "audit": {
+    "updated_by": null
+  }
+}
